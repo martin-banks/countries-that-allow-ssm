@@ -1,0 +1,155 @@
+
+const locationContent = [
+	{
+		country: false,
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'belgium',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'canada',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'spain',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'south africa',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'norway',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'sweden',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'iceland',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'portugal',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'argentina',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'denmark',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'uruguay',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'new zealand',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'france',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'brazil',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'england',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'scotland',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'luxembourg',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'finland',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'ireland',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'united states',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'columbia',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'greenland',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'germany',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+	{
+		country: 'malta',
+		scale: 1,
+		circle: 0,
+		origin: [100, 100],
+	},
+]
+
+export default locationContent

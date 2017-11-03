@@ -12,13 +12,8 @@ function sections({ title, text, i }) {
 function layout() {
 	const template = `
 	<div id="globeContainer"></div>
-	<section class="${Styles.wrapper}">
-		<h1>${Content.header.title}</h1>
-		<h3>${Content.header.intro}</h3>
-	</section>
-	${Content.parts.map((p, i) => sections({ title: p.title, text: p.text, i}))}
-	
-	`
+	${Content.parts.map((p, i) => sections({ title: p.title, text: p.text, i})).join('')}
+`
 
 	return template
 }
