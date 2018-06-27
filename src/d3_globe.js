@@ -122,6 +122,9 @@ function renderGlobe({ world, names, mapTopo, mapGeo } = {}) {
 
 	// TODO - refactor into main content obj and refactor refernces
 
+	function createCountryObjects(name) {
+		return countries.filter(c => c.name.toLowerCase().includes(name))[0]
+	}
 
 
 	const locations = Content.parts.map(l => {
@@ -172,11 +175,11 @@ function renderGlobe({ world, names, mapTopo, mapGeo } = {}) {
 				.style('display', 'block')
 				.style('opacity', 1)
 			})
-			// .on('mouseout', d => {
-			// 	countryTooltip
-			// 		.style('opacity', 1)
-			// 		.style('display', 'block')
-			// })
+			.on('mouseout', d => {
+				countryTooltip
+					.style('opacity', 0)
+					.style('display', 'none')
+			})
 			// .on('mousemove', d => {
 			// 	countryTooltip
 			// 		.style('left', `${d3.event.pageX + 7}px`)
@@ -244,8 +247,13 @@ function renderGlobe({ world, names, mapTopo, mapGeo } = {}) {
 		// const rotate = projection.rotate() // unused
 		// console.log('focussed', locations, locationIndex)
 		const focusedCountry = locations[locationIndex].country
-		if (!focusedCountry) return
-		const p = d3.geoCentroid(focusedCountry) // TODO - remove single latter naming
+		let p;
+		if (!focusedCountry) {
+			p = d3.geoCentroid(countries.filter(c => c.name.toLowerCase().includes('australia'))[0]) // TODO - remove single latter naming
+			return
+		} else {
+			p = d3.geoCentroid(focusedCountry) // TODO - remove single latter naming
+		}
 		const circleTweenFromAngle = circleStart().angle
 		const newAngle = (50 * locations[locationIndex].circle)
 		circleStart().angle = newAngle
@@ -283,7 +291,7 @@ function renderGlobe({ world, names, mapTopo, mapGeo } = {}) {
 						.attr('d', path)
 						// .attrTween("d", projectionTween(projection, projection = projectionTo))
 						// TODO - what is this?
-						.classed('focused', d => d.id === focusedCountry.id ? focused = d : false)
+						.classed('focused', d => d.id === (focusedCountry && focusedCountry.id) ? focused = d : false)
 				};
 			})
 	}
